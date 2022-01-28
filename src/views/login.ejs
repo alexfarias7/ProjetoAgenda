@@ -1,0 +1,53 @@
+<%- include('includes/head') %> <%- include('includes/navbar') %>
+
+
+<div class="container col-lg-8 my-5 form-start">
+
+  <%- include('includes/mensagers') %><br>
+    
+    <div class="card ">
+        <div class="card-header">
+            <h1 class="text-center"> Login</h1>
+        
+            <p class="text-center lead">Faça o Login para poder acessar a sua conta</p>
+        </div>
+
+        
+        <div class="card-body">
+
+            <div class="col">
+                <form action="/login/login" method="post">
+     
+                 <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                 <div class="mb-3">
+                   <label class="form-label form-email">Seu email</label>
+                   <input type="email" class="form-control" name="email">        
+                 </div>
+     
+                 <div class="mb-3">
+                   <label class="form-label">Sua senha</label>
+                   <input type="password" class="form-control" name="password">        
+                 </div>
+         
+                 <button type="submit" class="btn btn-primary col-12">Entrar</button>
+               </form>
+            </div>
+
+
+            <footer>
+                <p class="rodape-formulario">Ainda não possui uma conta? 
+                   <a href="/login/cadastro"> <button  class=" btn btn-primary btn-sm" >Cadastra-se</button> </a> 
+                 
+                </p>
+            </footer>
+
+        </div>
+
+
+      </div>
+
+   
+  
+</div>
+
+<%- include('includes/footer') %>

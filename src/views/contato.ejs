@@ -1,0 +1,53 @@
+<%- include('includes/head') %> 
+<%- include('includes/navbar') %>
+
+<div class="container col-lg-8 my-5 form-start">
+  <%- include('includes/mensagers') %>
+  
+          <div class="card ">
+            <div class="card-header">
+              <h1 class="text-center"> Contato</h1>
+              
+              <p class="text-center lead">Crie ou edite o seu contato abaixo</p>
+                  </div>
+        
+                
+                <div class="card-body">
+  
+          
+          <% if(contato._id) { %>
+            <form class="form-cadastro"  action="/contatos/edit/<%= contato._id %>" method="POST">
+            <% } else { %>
+            <form action="/contatos/register" method="POST">
+            <% } %>
+                    <div class="col">
+             
+                         <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                         <div class="mb-3 " >
+                           <label class="form-label">Nome</label>
+                           <input value="<%= contato.nome %>" type="text" class="form-control" name="nome">
+       
+                         </div>
+                         <div class="mb-3 " >
+                           <label class="form-label">Sobrenome</label>
+                           <input  value="<%= contato.sobrenome %>" type="text" class="form-control" name="sobrenome">        
+                         </div>
+                         <div class="mb-3 " >
+                           <label class="form-label ">Telefone</label>
+                           <input value="<%= contato.telefone %>" type="number" class="form-control" name="telefone">        
+                         </div>
+                         <div class="mb-3 " >
+                           <label class="form-label ">Email</label>
+                           <input value="<%= contato.email %>" type="email" class="form-control" name="email">        
+                         </div>
+                         
+                         <button type="submit" class="btn btn-primary col-12">Salvar contato</button>
+                          </form>
+        
+                </div>
+              </div>   
+        </div>
+    </div>
+  
+
+<%- include('includes/footer') %>

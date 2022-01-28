@@ -1,0 +1,16 @@
+.rodape-formulario{
+    text-align: end;
+    margin-top: 30px;
+}
+
+.form-start{
+    width: 40vw;
+    display: flexbox;
+    align-items: center;
+}
+.card-header{
+    height: 18vh;
+}
+.form-email{
+    margin-top: 100px;
+}
