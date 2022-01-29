@@ -1,2 +1,2 @@
 # ProjetoAgenda
- Projeto feito durante as aulas, para aprimorar meus conehcimentos em Nodejs.
+ Projeto feito durante as aulas, usando Nodejs e bootstrap 5, para aprimorar meus conhecimento em Nodejs.
